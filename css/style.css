@@ -1,0 +1,227 @@
+/* CSS Reset */
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: boarder-box;
+}
+
+
+/* General page styling */
+body {
+background-color:rgb(194, 114, 2);
+color: #333333;
+font-family: Arial, sans-serif;
+margin: 0;
+padding: 0;
+}
+
+/* Header and navigation */
+header {
+background-color: #8B7355;
+padding: 20px;
+text-align: center;
+}
+
+nav a {
+color: #4A3728;
+text-decoration: none;
+font-weight: bold;
+margin: 0 8px;
+}
+
+nav a:hover {
+color: white;
+text-decoration: underline;
+}
+
+/* Main content */
+main {
+max-width: 1000px;
+margin: 30px auto;
+padding: 20px;
+}
+
+/* Headings */
+h1 {
+color: #4A3728;
+text-align: center;
+margin-bottom: 25px;
+}
+
+h2 {
+color: #333333;
+}
+
+h3 {
+color: #4A3728;
+}
+
+/* Paragraphs */
+p {
+line-height: 1.6;
+font-size: 16px;
+letter-spacing: 0.3px;
+}
+
+/* Lists */
+ul {
+line-height: 1.8;
+}
+
+/* Logo */
+.logo {
+width: 150px;
+height: 150px;
+border: 3px solid #8B7355;
+display: block;
+margin: 0 auto 20px auto;
+}
+
+/* Home page logo */
+.home-logo {
+width: 250px;
+height: 250px;
+border: 3px solid #8B7355;
+display: block;
+margin: 20px auto;
+}
+
+/* Gallery */
+.gallery {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 20px;
+}
+
+.gallery img {
+width: 150px;
+height: 150px;
+object-fit: cover;
+border: 3px solid #8B7355;
+}
+
+/* Food/menu images */
+.menu-image {
+width: 150px;
+height: 150px;
+object-fit: cover;
+border: 3px solid #8B7355;
+}
+
+/* Contact form */
+form {
+background-color: #f5efe6;
+padding: 20px;
+border: 2px solid #8B7355;
+max-width: 600px;
+}
+
+input,
+textarea {
+padding: 10px;
+margin-top: 5px;
+border: 1px solid #8B7355;
+border-radius: 4px;
+}
+
+textarea {
+width: 90%;
+height: 100px;
+}
+
+button {
+background-color: #8B7355;
+color: white;
+padding: 10px 20px;
+border: none;
+border-radius: 5px;
+cursor: pointer;
+}
+
+button:hover {
+background-color: #4A3728;
+}
+
+/* Footer */
+footer {
+background-color: #4A3728;
+color: white;
+text-align: center;
+padding: 15px;
+margin-top: 40px;
+}
+
+/* Visual effects */
+form {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Keyboard focus */
+input:focus,
+textarea:focus,
+button:focus {
+    outline: 2px solid #4A3728;
+}
+
+/* Active links and buttons */
+nav a:active,
+button:active {
+    transform: scale(0.98);
+}
+
+/* --- Responsive Design --- */
+
+@media only screen and (max-width: 600px) {
+    main {
+        padding: 15px;
+        margin: 15px auto;
+    }
+    nav {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 10px;
+    }
+    nav a {
+        margin: 0;
+    }
+    .home-logo {
+        width: 200px;
+        height: 200px;
+    }
+    .logo {
+        width: 120px;
+        height: 120px;
+    }
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+    .gallery img {
+        width: 200px;
+        height: 200px;
+    }
+    .menu-image {
+        width: 200px;
+        height: 200px;
+    }
+    h1 {
+        font-size: 28px;
+    }
+    h2 {
+        font-size: 22px;
+    }
+    p {
+        font-size: 15px;
+    }
+    form {
+        width: auto;
+    }
+    input,
+    textarea {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+}
