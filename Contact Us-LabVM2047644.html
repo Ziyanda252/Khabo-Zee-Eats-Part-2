@@ -1,9 +1,12 @@
 <!doctype html>
 <html lang="en">
     <head>
-        <title> Contact Us</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us | Khabo Zee's Eats</title>
+    <meta name="description" content="Contact Khabo Zee's Eats with questions, feedback or general enquiries.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
     <!-- The body of the webpage -->
     <body>
     <header> 
@@ -38,28 +41,100 @@
             <p><strong>Tiktok:</strong> @Khabo Zee's Eats</p>
             <p><strong>Facebook:</strong> @KZE_eats</p>
             
-            <form>
-            <label>Name:</label>
-            <input type="text">
+            
+<<form id="contactForm">>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
 
-            <br><br>
+    <br><br>
 
-            <label>Email:</label>
-            <input type="email">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
 
-            <br><br>
+    <br><br>
 
-            <label>Message:</label>
-            <textarea></textarea>
+    <label for="messageType">Message Type:</label>
+    <select id="messageType" name="messageType" required>
+        <option value="">Select a message type</option>
+        <option value="General Enquiry">General Enquiry</option>
+        <option value="Product Enquiry">Product Enquiry</option>
+        <option value="Feedback">Feedback</option>
+        <option value="Complaint">Complaint</option>
+    </select>
 
-             <br><br>
+    <br><br>
 
-             <button type="submit">Send Message</button>
-             </form>
+    <label for="message">Message:</label>
+    <textarea id="message" name="message" required></textarea>
+
+    <br><br>
+
+    <button type="submit">Send Message</button>
+</form>
+
 
 
 
                 <footer> 
                 &copy; ST1000000 #Khabo Zee's Eats</footer>
+         
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    if (!this.checkValidity()) {
+        this.reportValidity();
+        return;
+    }
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const messageType = document.getElementById("messageType").value;
+    const message = document.getElementById("message").value.trim();
+
+    const subject = encodeURIComponent("Website Contact: " + messageType);
+
+    const body = encodeURIComponent(
+        "Name: " + name + "\n" +
+        "Email: " + email + "\n" +
+        "Message Type: " + messageType + "\n\n" +
+        "Message:\n" + message
+    );
+
+    window.location.href =
+        "mailto:zee_eats2020@gmail.com?subject=" + subject +
+        "&body=" + body;
+});
+</script>
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    if (!this.checkValidity()) {
+        this.reportValidity();
+        return;
+    }
+
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const messageType = document.getElementById("messageType").value;
+    const message = document.getElementById("message").value.trim();
+
+    const subject = encodeURIComponent("Website Contact: " + messageType);
+
+    const body = encodeURIComponent(
+        "Name: " + name + "\n" +
+        "Email: " + email + "\n" +
+        "Message Type: " + messageType + "\n\n" +
+        "Message:\n" + message
+    );
+
+    window.location.href =
+        "mailto:khabozeeseats@gmail.com?subject=" + subject +
+        "&body=" + body;
+});
+</script>
+
+  
             </body>
             </html>

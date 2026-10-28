@@ -225,3 +225,183 @@ button:active {
     }
 
 }
+/* Menu search */
+.menu-search {
+    text-align: center;
+    margin: 25px auto;
+}
+
+.menu-search label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #4A3728;
+}
+
+#menuSearch {
+    width: 90%;
+    max-width: 400px;
+    padding: 12px;
+    border: 2px solid #8B7355;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+#searchMessage {
+    margin-top: 10px;
+    color: #4A3728;
+}
+
+.menu-item {
+    margin-bottom: 30px;
+}
+
+/* Food gallery layout */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+    margin: 30px auto;
+}
+
+.gallery-item {
+    background-color: #f5eadb;
+    padding: 12px;
+    border-radius: 10px;
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+    border-radius: 7px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.gallery-item a:hover img {
+    transform: scale(1.03);
+    opacity: 0.9;
+}
+
+.gallery-item figcaption {
+    text-align: center;
+    padding: 12px 5px 4px;
+    font-weight: bold;
+    color: #4A3728;
+}
+
+/* Lightbox overlay: works without JavaScript */
+.lightbox {
+    display: none;
+}
+
+.lightbox:target {
+    display: flex;
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    background: rgba(0, 0, 0, 0.88);
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px 20px;
+}
+
+.lightbox img {
+    display: block;
+    max-width: 90%;
+    max-height: 85vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border: 3px solid white;
+    border-radius: 8px;
+}
+
+.close-lightbox {
+    position: absolute;
+    top: 12px;
+    right: 25px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .gallery-item img {
+        height: 220px;
+    }
+
+    .lightbox img {
+        max-width: 100%;
+    }
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Page content fades in */
+main {
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Gallery images gently zoom on hover */
+.gallery-item img {
+    transition: transform 0.35s ease, opacity 0.35s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.04);
+}
+
+/* Navigation links change smoothly */
+nav a {
+    display: inline-block;
+    transition: color 0.25s ease, transform 0.25s ease;
+}
+
+nav a:hover {
+    transform: translateY(-2px);
+}
+
+/* Buttons respond smoothly */
+button {
+    transition: background-color 0.25s ease,
+                transform 0.2s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+}
+
+/* Respect visitors who prefer less animation */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}

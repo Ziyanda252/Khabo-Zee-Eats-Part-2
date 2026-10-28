@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://ziyanda252.github.io/Khabo-Zee-Eats-Part-2/sitemap.xml
+

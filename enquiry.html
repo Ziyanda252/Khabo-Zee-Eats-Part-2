@@ -1,0 +1,104 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Enquiries | Khabo Zee's Eats</title>
+    <meta name="description" content="Enquire about traditional South African food, menu prices and availability at Khabo Zee's Eats.">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Product Enquiries</h1>
+        <p>Have a question about our food? We would love to hear from you!</p>
+    </header>
+
+    <main>
+        <h2>Enquiry Form</h2>
+
+        <p>Complete this form to ask about our food, prices or availability.</p>
+
+        <form id="enquiryForm">
+
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <br><br>
+
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
+
+            <br><br>
+
+            <label for="product">Food Item:</label>
+            <select id="product" name="product" required>
+                <option value="">Select a food item</option>
+                <option value="Inyama yenhloko">Inyama yenhloko</option>
+                <option value="Pork Trotters">Pork Trotters</option>
+                <option value="Mogodu and Pap">Mogodu and Pap</option>
+                <option value="Stuffed Fatcakes">Stuffed Fatcakes</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <br><br>
+
+            <label for="enquiryType">Enquiry Type:</label>
+            <select id="enquiryType" name="enquiryType" required>
+                <option value="">Select an enquiry type</option>
+                <option value="Price">Price</option>
+                <option value="Availability">Availability</option>
+                <option value="Ingredients">Ingredients</option>
+                <option value="Other">Other</option>
+            </select>
+
+            <br><br>
+
+            <label for="message">Your Enquiry:</label>
+            <textarea id="message" name="message" rows="5" required></textarea>
+
+            <br><br>
+
+            <button type="submit">Submit Enquiry</button>
+
+        </form>
+    </main>
+
+    <script>
+        document.getElementById("enquiryForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+
+            if (!this.checkValidity()) {
+                this.reportValidity();
+                return;
+            }
+
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const product = document.getElementById("product").value;
+            const enquiryType = document.getElementById("enquiryType").value;
+            const message = document.getElementById("message").value.trim();
+
+            const subject = encodeURIComponent("Food Enquiry: " + product);
+
+            const body = encodeURIComponent(
+                "Name: " + name + "\n" +
+                "Email: " + email + "\n" +
+                "Food Item: " + product + "\n" +
+                "Enquiry Type: " + enquiryType + "\n\n" +
+                "Enquiry:\n" + message
+            );
+
+            window.location.href =
+                "mailto:zee_eats2020@gmail.com?subject=" + subject +
+                "&body=" + body;
+        });
+    </script>
+
+</body>
+</html>
+

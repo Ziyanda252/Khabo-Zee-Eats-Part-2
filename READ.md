@@ -12,3 +12,25 @@
 ## References 
 - Google Search. (2026). Used for research and information gathering.
 - Pinterest. (2026). Used for website design and visual inspiration.
+
+## Part 2 – CSS Styling and Responsive Design
+
+For Part 2, the Khabo Zee's Eats website was updated with an external CSS stylesheet and responsive design.
+
+### Changes Made
+
+- Created and linked an external `css/style.css` stylesheet.
+
+- Added consistent colours, fonts, spacing, headings and page styling.
+
+- Used Flexbox for the gallery and responsive navigation.
+
+- Added hover, focus and active effects.
+
+- Added responsive design using CSS media queries.
+
+- Added responsive logo images using `srcset` and `sizes`.
+
+- Tested the website at desktop, tablet and mobile screen sizes.
+
+- Updated the website pages and navigation.

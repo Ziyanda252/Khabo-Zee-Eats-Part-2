@@ -1,10 +1,15 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <title>Products&Services</title>
-        <link rel="stylesheet" href="css/style.css">
-    </head>
-    <! -- The body of the webpage>
+    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu and Prices | Khabo Zee's Eats</title>
+    <meta name="description" content="Explore the Khabo Zee's Eats menu, including inyama yenhloko, pork trotters, pap and mogodu, and stuffed fatcakes.">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+    <!-- The body of the webpage -->
     <body>
     <header> 
         <nav>
@@ -20,31 +25,54 @@
         <main>
             <img src="Images/Logo.PNG" class="logo">
           <!-- Main heading for the menu -->
-            <h1>
+            <h1> Explore our menu </h1>
+            <div class="menu-search">
+        <label for="menuSearch">Search our menu:</label>
+
+           <input
+           type="search"
+           id="menuSearch"
+           placeholder="Search for food or drinks..."
+>
+
+         <p id="searchMessage" aria-live="polite"></p>
+
+         </div>
             <!-- Inyama yenhloko menu item -->
+             <article class="menu-item">
             <h3 style="color:#333333;">Inyama yenhloko</h3>
-             <img src="images/Inyama yenhloko.webp" class="menu-image"> 
-               <p> 
+             <img src="images/Inyama yenhloko.webp" class="menu-image"
+               class="menu-image"
+               alt="Stuffed fatcakes">
+             <p> 
                 Served with :
                 <ul>
                 <li> Pap - R60 </li>
                 <li> uPhuthu - R50 </li>
             </ul>
+            </article>
             </p>
             <!-- Pork Trotters menu item -->
+             <article class="menu-item">
             <h3 style="color:#333333;">Pork Trotters</h3>
-             <img src="images/Pork Trotters.JPG" class="menu-image"> 
-               <p> 
+             <img src="images/Pork Trotters.JPG" class="menu-image"
+              class="menu-image"
+              alt="Stuffed fatcakes"> 
+             <p> 
                 Served with :
                 <ul>
                 <li> Pap - R55 </li>
                 <li> No side - R40 </li>
             </ul>
+            </article>
             </p>
              <!-- Pap and Mogodu menu item -->
+              <article class="menu-item"></article>
             <h3 style="color:#333333;">Pap and Mogodu</h3>
-             <img src="images/Mogodu and Pap.JPG" class="menu-image"> 
-               <p> 
+             <img src="images/Mogodu and Pap.JPG" class="menu-image"
+             class="menu-image"
+             alt="Stuffed fatcakes">
+             <p> 
                 Served with :
                 <ul>
                 <li> Spinach - R55 </li>
@@ -52,18 +80,27 @@
                 <li>Both sides - R60 </li>
                 <li> No side - R50 </li>
             </ul>
+            </article>
             </p>
              <!-- Stuffed fatcakes menu item -->
-            <h3 style="color:#333333;">Stuffed fatcakes</h3>
-             <img src="images/Stuffed Fatcakes.jpg" class="menu-image"> 
-               <p> 
-                Served with :
-                <ul>
-                <li> Achaar - R10  </li>
-                <li> No fill - R8</li>
-            </ul>
+            <article class="menu-item">
+           <h3>Stuffed fatcakes</h3>
+
+           <img
+        src="images/Stuffed Fatcakes.jpg"
+        class="menu-image"
+        alt="Stuffed fatcakes">
+
+        <p>Served with:</p>
+
+        <ul>
+        <li>Achaar - R10</li>
+        <li>No fill - R8</li>
+        </ul>
+        </article>
             </p>
-             <!-- Drinks -->
+             <!-- Drinks and extras -->
+              <article class="menu-item">
             <h3 style="color:#333333;">Extras</h3>
             <ul>
                 <li>100% Mango juice - R25 </li>
@@ -71,11 +108,12 @@
                 <li>Sparkling water - R15</li>
                 <li>Soft drinks - R20</li>
             </ul>
-
+             </article>
 
 
 
                 <footer> 
                 &copy ;ST1000000 #Khabo Zee's Eats</footer>
-            </body>
+           <script src="js/script.js"></script>
+         </body>
             </html>
