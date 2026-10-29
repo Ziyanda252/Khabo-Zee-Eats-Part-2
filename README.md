@@ -34,3 +34,10 @@ For Part 2, the Khabo Zee's Eats website was updated with an external CSS styles
 - Tested the website at desktop, tablet and mobile screen sizes.
 
 - Updated the website pages and navigation.
+### Part 3 Updates
+- Added an interactive OpenStreetMap view showing Vilakazi Street, Soweto.
+- Improved contact and enquiry forms with HTML5 validation and JavaScript validation.
+- Added email draft functionality so users can prepare and submit their enquiries.
+- Implemented menu search and filtering for food items.
+- Added SEO improvements, including page titles, meta descriptions, `robots.txt`, and `sitemap.xml`.
+- Tested the contact and enquiry forms to confirm that validation and email drafts work correctly.
