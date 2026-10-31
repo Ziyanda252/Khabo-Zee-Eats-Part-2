@@ -405,3 +405,54 @@ button:hover {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* FAQ accordion styling */
+.faq-section {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+.faq-section h2 {
+    color: #8B4513;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.faq-section details {
+    background-color: #fff8f0;
+    border: 1px solid #d6a36a;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    padding: 15px;
+}
+
+.faq-section summary {
+    color: #8B4513;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.faq-section details p {
+    color: #333333;
+    line-height: 1.6;
+    margin-top: 12px;
+}
+/* Dynamically loaded Featured Dishes */
+.dynamic-menu {
+    max-width: 1100px;
+    margin: 40px auto;
+    padding: 25px;
+    background-color: #fff8f0;
+    border-radius: 10px;
+}
+
+.dynamic-menu h2 {
+    color: #8B4513;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.dynamic-menu .menu-item {
+    margin-bottom: 20px;
+}

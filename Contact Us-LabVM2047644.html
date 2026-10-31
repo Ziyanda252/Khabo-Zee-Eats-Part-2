@@ -23,7 +23,28 @@
             <img src="Images/Logo.PNG" class="logo">
             <!-- Main heading for the Contact Us page -->
             <h1 style="text-align:center;">Contact Us</h1>
+<!-- Interactive map of Vilakazi Street, Soweto -->
+<section class="location-map">
+    <h2>Find us at Vilakazi Street, Soweto</h2>
+    <p>Visit us in the heart of Soweto, Johannesburg, South Africa.</p>
 
+    <iframe
+        title="Map showing Vilakazi Street, Soweto"
+        src="https://www.openstreetmap.org/export/embed.html?bbox=27.78%2C-26.28%2C27.82%2C-26.25&layer=mapnik"
+        width="100%"
+        height="400"
+        style="border: 1px solid #ccc;"
+        loading="lazy">
+    </iframe>
+
+    <p>
+        <a href="https://www.openstreetmap.org/search?query=Vilakazi%20Street%2C%20Soweto"
+           target="_blank"
+           rel="noopener noreferrer">
+            Get directions to Vilakazi Street
+        </a>
+    </p>
+</section>
            <h2 style="color: #333333;">We'd love to hear from you!</h2>
            <p>Have a question, want to place an order, or simply want to know more about our food? 
             Get in touch with Khabo Zee's Eats - we're happy to help!</p>
@@ -42,7 +63,7 @@
             <p><strong>Facebook:</strong> @KZE_eats</p>
             
             
-<<form id="contactForm">>
+    <form id="contactForm">
     <label for="name">Name:</label>
     <input type="text" id="name" name="name" required>
 
@@ -135,6 +156,5 @@ document.getElementById("contactForm").addEventListener("submit", function(event
 });
 </script>
 
-  
             </body>
             </html>
